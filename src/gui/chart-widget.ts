@@ -454,6 +454,8 @@ export class ChartWidget<HorzScaleItem> implements IDestroyable, IChartWidgetBas
 					ensureNotNull(paneWidget.leftPriceAxisWidget()).optimalWidth(),
 					this._options.leftPriceScale.minimumWidth
 				);
+				if (this._options.leftPriceScale.permWidth>0)
+					leftPriceAxisWidth = this._options.leftPriceScale.permWidth;
 			}
 			if (this._isRightAxisVisible()) {
 				rightPriceAxisWidth = Math.max(
@@ -461,6 +463,8 @@ export class ChartWidget<HorzScaleItem> implements IDestroyable, IChartWidgetBas
 					ensureNotNull(paneWidget.rightPriceAxisWidget()).optimalWidth(),
 					this._options.rightPriceScale.minimumWidth
 				);
+				if (this._options.rightPriceScale.permWidth>0)
+					rightPriceAxisWidth = this._options.rightPriceScale.permWidth;
 			}
 			totalStretch += paneWidget.stretchFactor();
 		}

@@ -190,6 +190,8 @@ export interface PriceScaleOptions {
 	 * @defaultValue 0
 	 */
 	minimumWidth: number;
+
+	permWidth: number;
 }
 
 interface RangeCache {
