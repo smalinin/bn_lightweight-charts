@@ -202,6 +202,8 @@ export interface PriceScaleOptions {
 	 * @defaultValue false
 	 */
 	ensureEdgeTickMarksVisible: boolean;
+
+	permWidth: number;
 }
 
 interface RangeCache {
